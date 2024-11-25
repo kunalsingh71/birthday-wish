@@ -1,0 +1,84 @@
+/* General body styles */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #ffe6f0; /* Soft pink background */
+    color: #4b2c43; /* Deep purple text */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden; /* To prevent horizontal scroll when zooming */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Header 1 (h1) */
+h1 {
+    font-size: 2.2em; /* Reduced size */
+    text-align: center;
+    color: #d0006f; /* Deep pink */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Cursive', sans-serif;
+    text-shadow: 2px 2px #ffe6f0; /* Light pink shadow */
+}
+
+/* Header 2 (h2) */
+h2 {
+    font-size: 1.8em; /* Reduced size */
+    color: #ff4f81; /* Soft pink */
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Cursive', sans-serif;
+}
+
+/* Header 3 (h3) */
+h3 {
+    font-size: 1.5em; /* Reduced size */
+    color: #ff739a; /* Lighter pink */
+    margin-top: 15px;
+    text-align: left;
+    font-family: 'Cursive', sans-serif;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 1em; /* Reduced initial text size */
+    margin: 20px;
+    padding: 10px;
+    background-color: #fff5fa; /* Light pink background */
+    border-left: 5px solid #ff4f81; /* Accent border */
+    color: #4b2c43; /* Deep purple text */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    line-height: 1.8;
+    position: relative;
+    z-index: 1; /* Ensure paragraph stays above blurred background */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* Adding hover effect on paragraph */
+p:hover {
+    transform: scale(1.05); /* More subtle zoom */
+    z-index: 2;
+}
+
+/* Blur everything except the paragraph when hovering */
+body:hover p:not(:hover) {
+    filter: blur(8px); /* Blurs background content */
+    transform: scale(0.95); /* Slight zoom out for other elements */
+}
+
+/* Adding a hover effect for headings */
+h1:hover, h2:hover, h3:hover {
+    color: #d0006f;
+    text-decoration: underline;
+}
+
+/* Styling links (if any) */
+a {
+    color: #d0006f;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff4f81;
+    text-decoration: underline;
+}
